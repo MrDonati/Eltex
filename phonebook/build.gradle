@@ -1,0 +1,14 @@
+apply plugin:"java"
+apply plugin:"application"
+
+task wrapper(type: Wrapper){
+    gradleVersion = "4.10.2"
+}
+run{
+    standardInput = System.in
+}
+mainClassName = "phonebook.Main"
+dependencies
+        {
+            compile files("lib/mysql-connector-java-8.0.13.jar")
+        }
